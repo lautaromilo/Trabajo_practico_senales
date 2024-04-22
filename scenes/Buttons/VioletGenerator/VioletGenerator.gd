@@ -12,4 +12,9 @@ func _process(delta):
 
 
 func _on_button_down():
-	pass # Replace with function body.
+	generate_block()
+	
+func generate_block():
+	var scene = load ("res://scenes/Blocks/Violet/BlockViolet.tscn")
+	var instance = scene.instantiate()
+	add_child(instance)
